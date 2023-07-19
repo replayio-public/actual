@@ -35,3 +35,9 @@ jobs:
           name: desktop-client-test-results
           path: packages/desktop-client/test-results/
           retention-days: 30
+      - name: Upload replays
+        if: ${{ always() }}
+        uses: replayio/action-upload@v0.5.1
+        with:
+          public: true
+          api-key: rwk_fh2vgjd5HqpVvz22R1xDK26F9YEUQ1dJk9hyBjFODCX
