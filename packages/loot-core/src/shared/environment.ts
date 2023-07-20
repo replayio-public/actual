@@ -1,6 +1,7 @@
 /* eslint-disable import/no-unused-modules */
 
 export function isPreviewEnvironment() {
+  return true;
   return String(process.env.REACT_APP_NETLIFY) === 'true';
 }
 
